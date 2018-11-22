@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" 
+	fx:id="MainWindow"
+	stylesheets="@mainStyle.css"
+	maxWidth="1280.0" minWidth="1280.0"
+	maxHeight="800.0" minHeight="800.0"
+	xmlns="http://javafx.com/javafx/8.0.191"
+	fx:controller="com.joakimpetersson.crazysealed.MainWindowController"
+	>
+	
+	<columnConstraints>
+		<ColumnConstraints hgrow="NEVER"
+			percentWidth="33.0" />
+		<ColumnConstraints hgrow="NEVER"
+			percentWidth="33.0" />
+		<ColumnConstraints hgrow="NEVER"
+			percentWidth="33.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints 
+			percentHeight="12.5" />
+		<RowConstraints
+			percentHeight="75.0" />
+		<RowConstraints 
+			percentHeight="12.5" />
+	</rowConstraints>
+	<children>
+	<!--  Title Labels -->
+		<Label text="Player One"
+			GridPane.columnIndex="0"
+			GridPane.rowIndex="0" 
+			>
+			<!--  
+			 <maxHeight>
+        		<Double fx:constant="MAX_VALUE"/>
+    		</maxHeight>
+    		-->
+			</Label>
+		<Label text="Boosters"
+			GridPane.columnIndex="1"
+			GridPane.rowIndex="0" 
+			/>
+		<Label text="Player Two"
+			GridPane.columnIndex="2"
+			GridPane.rowIndex="0" />
+	<!-- ListViews -->
+		<ListView fx:id="playerOneList"
+			prefWidth="${node.parent.width}"
+			prefHeight="${node.parent.height}"
+			GridPane.columnIndex="0"
+			GridPane.rowIndex="1"/>
+		<ListView fx:id="boosterList"			
+			GridPane.columnIndex="1"
+			GridPane.rowIndex="1"/>
+		<ListView fx:id="playerTwoList"		
+			GridPane.columnIndex="2"
+			GridPane.rowIndex="1"/>
+	<!-- Buttons -->
+		<Button fx:id="pickButton"
+			text="PICK"
+			GridPane.columnIndex="1"
+			GridPane.rowIndex="2" />
+	</children>
+</GridPane>
+
